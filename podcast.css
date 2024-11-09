@@ -1,0 +1,291 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* General styles for the navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: linear-gradient(145deg, rgba(38, 38, 38, 0.9), rgba(70, 70, 70, 0.9)); /* Dark brown and black mix */
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  color: #f4e1c1; /* Creamy brown for text */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  backdrop-filter: blur(10px); /* Subtle blur effect for background */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(50, 50, 50, 0.9)); /* Darker gradient on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+}
+
+/* Styling for the logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4e1c1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 0.5em;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo span {
+  font-size: 1.8em;
+  color: #fdc89c; /* Light brown/orange accent for logo */
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo:hover img {
+  transform: rotate(360deg);
+  filter: brightness(1.2); /* Slight brightness effect on logo hover */
+}
+
+/* Styling for the navigation links */
+
+
+
+/* 
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #f3a81e; 
+  transform: scale(1.1);
+} */
+
+
+
+
+
+
+
+
+/* Styling for the call to action button */
+.cta {
+  background: #8d6e63; /* Creamy brown/earthy tone for button */
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta:hover {
+  background: #a1887f; /* Lighter creamy brown for hover effect */
+  transform: scale(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure that the fixed navbar doesn't overlap the content */
+body {
+  padding-top: 80px; /* Adjust this value depending on the navbar height */
+}
+
+
+.navbar .nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-right: 20px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  color: #f39c12;
+}
+
+
+/* Podcast Header Styling */
+.podcast-header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.podcast-header h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.podcast-header p {
+  font-size: 18px;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Category Title */
+.category {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.category h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 4px solid #8d6e63;
+}
+
+
+
+.podcast-container iframe {
+  flex: 0 0 auto;
+  width: 360px;
+  height: 200px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
+}
+
+.podcast-container iframe:hover {
+  transform: scale(1.05);
+  border-color: #8d6e63;
+}
+
+/* Scroll Buttons */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #8d6e63;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-button:hover {
+  background-color: #8d6e63;
+}
+
+.scroll-left {
+  left: 5px;
+}
+
+.scroll-right {
+  right: 5px;
+}
+
+
+
+
+
+
+
+
+/* Hide scrollbar for .podcast-container */
+.podcast-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.podcast-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, and newer versions of Edge */
+}
+
+.podcast-container {
+  -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and older versions of Edge */
+  scrollbar-width: none;     /* Hide scrollbar in Firefox */
+}
